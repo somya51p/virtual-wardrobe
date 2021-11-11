@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "./App.css";
 import { Login, Register } from "./components/login/index";
+import Home from "./components/Home";
+import { Routes, Route, BrowserRouter as Router, } from "react-router-dom";
 
 const App = () => {
     const [isLogginActive, setIsLogginActive] = useState(true);
@@ -26,9 +28,10 @@ const App = () => {
 
       const current = isLogginActive ? "Register" : "Login";
       const currentActive = isLogginActive ? "login" : "register";
-      return (
+    return (
+    <Router>
         <div className="App">
-          <div className="login">
+          {/* <div className="login">
             <div
               className="container"
               // ref={(ref) => (this.container = ref)}
@@ -43,18 +46,22 @@ const App = () => {
                 //  containerRef={(ref) => (this.current = ref)}
                 />
               )}
+            </div>
+            <RightSide
+                className={rightClass}
+                current={current}
+                currentActive={currentActive}
+                // containerRef={(ref) => (this.rightSide = ref)}
+                onClick={changeState}
+            />
+          </div> */}
+            <Routes>
+            <Route exact path="/home" element={<Home />} />
+            </Routes>
         </div>
-        <RightSide
-          className={rightClass}
-          current={current}
-          currentActive={currentActive}
-          // containerRef={(ref) => (this.rightSide = ref)}
-          onClick={changeState}
-        />
-      </div>
-    </div>
-      );
-}
+    </Router>    
+    );
+};
 
 const RightSide = (props) => {
   return (

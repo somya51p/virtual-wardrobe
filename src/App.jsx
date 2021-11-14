@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Login, Register } from "./components/login/index";
 import userServices from "./services/user";
+import { Deploy } from "./components/Deploy/Deploy";
 
 const App = () => {
   const [isLogginActive, setIsLogginActive] = useState(true);
@@ -45,6 +46,21 @@ const App = () => {
     }
   };
 
+  const [state, setState] = useState({})
+  useEffect(() => {
+    fetch("/api").then(response => {
+      if(response.status == 200)
+      {
+        return response.json()
+      }
+    }).then(data => console.log(data))
+    .then(error => console.log(error))
+  })
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
+
   useEffect(() => {
     setRightClass("right");
   }, []);
@@ -65,6 +81,7 @@ const App = () => {
 
   const current = isLogginActive ? "Register" : "Login";
   const currentActive = isLogginActive ? "login" : "register";
+  if(!user){
   return (
     <div className="App">
       <div className="login">
@@ -103,6 +120,12 @@ const App = () => {
       </div>
     </div>
   );
+}
+return(
+  <div className="ss">
+    <Deploy/>
+  </div>
+);
 };
 
 const RightSide = (props) => {

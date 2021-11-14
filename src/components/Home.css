@@ -32,10 +32,10 @@ a {
 }
 
 /* a:hover {
-  background: #6ec8a4;
+  background: #DDA0DD;
 }
 a:active {
-  background: #6ec8a4;
+  background: #DDA0DD;
 } */
 
 .navicon {
@@ -81,15 +81,20 @@ a:active {
   display: block;
   font-family: "Changa", sans-serif;
   /* font-family: "Abel", sans-serif; */
-  /* border: 3px solid teal;
+  /* border: 3px solid #BA55D3;
     border-radius: 15px; */
 }
 
 .home h1 {
-  margin-top: 5em;
+  margin-top: 1em;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #6ec8a4;
+  color: mediumaquamarine;
+}
+.home p {
+  margin-right: 20em;
+  margin-left: 20em;
+  color: #d8bfd8;
 }
 
 .home .bn {
@@ -113,7 +118,7 @@ a:active {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 15%;
-  border: #6ec8a4 !important;
+  border: mediumaquamarine !important;
 }
 
 .btn-started {

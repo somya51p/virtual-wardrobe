@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import web from "../bg.jpeg";
+import web from "../bg.jpg";
 import "./Home.css";
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
           <div
             className="col-lg-12 order-1 order-lg-2 header-img"
             style={{
+              backgroundImage: "url(" + web + ")",
               backgroundSize: "cover",
               height: "100vh",
               paddingTop: "50px",
@@ -26,8 +27,11 @@ const Home = () => {
             <div className="txt">
               <h1>
                 Feel Organized without the Effort with{" "}
-                <strong className="bn">Virtual Wardrobe</strong>{" "}
+                <strong className="bn">Virtual Wardrobe</strong>
               </h1>
+              <p>Welcome to Virtual Wardrobe for your smart shopping. Our website provides users the best way to try cloths while online shopping virtually.
+                  This smart-fit feature allows you to choose any cloth
+                   and your image and then as a result, you can view how that cloth will look on you. This would surely help you select the best cart.</p>
               <div className="my-3">
                 <Link to="/wardrobe">
                   <button className="button">

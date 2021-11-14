@@ -7,9 +7,9 @@ const App = () => {
   const [isLogginActive, setIsLogginActive] = useState(true);
   const [rightClass, setRightClass] = useState("");
   const [user, setUser] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setName] = useState("Abhishek");
+  const [email, setEmail] = useState("test@vw.in");
+  const [password, setPassword] = useState("test");
 
   const handleLogin = async () => {
     console.log(email);
@@ -21,8 +21,6 @@ const App = () => {
       });
       console.log(newUser);
       setUser(newUser);
-      setEmail("");
-      setPassword("");
       window.localStorage.setItem("user", JSON.stringify(newUser));
     } catch (err) {
       console.error(err.message);

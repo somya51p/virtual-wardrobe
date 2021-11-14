@@ -1,11 +1,10 @@
 import React from "react";
 import loginImg from "../../images/login.webp";
 
-export class Register extends React.Component {
+export const Register = () => {
 
-  render() {
     return (
-      <div className="base-container" ref={this.props.containerRef}>
+      <div className="base-container">
         <div className="header">Register</div>
         <div className="content">
           <div className="image">
@@ -33,5 +32,4 @@ export class Register extends React.Component {
         </div>
       </div>
     );
-  }
 }

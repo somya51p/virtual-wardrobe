@@ -5,6 +5,8 @@ import userServices from "./services/user";
 import { Deploy } from "./components/Deploy/Deploy";
 import axios from "axios";
 import { Wardrobe } from "./components/wardrobe";
+import Home from "./components/Home";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [isLogginActive, setIsLogginActive] = useState(true);
@@ -113,9 +115,12 @@ const App = () => {
   );
 }
 return(
-  <div className="ss">
-    <Wardrobe/>
-  </div>
+  <Routes>
+    <Route exact path="/" element={<Home/>}/>
+    <Route exact path="/wardrobe" element={<Wardrobe/>}/>
+    <Route exact path="/1234" element={<h1>hiiii</h1>}/>
+  
+  </Routes>  
 );
 };
 

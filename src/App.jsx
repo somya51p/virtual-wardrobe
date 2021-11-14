@@ -4,6 +4,7 @@ import { Login, Register } from "./components/login/index";
 import userServices from "./services/user";
 import { Deploy } from "./components/Deploy/Deploy";
 import axios from "axios";
+import { Wardrobe } from "./components/wardrobe";
 
 const App = () => {
   const [isLogginActive, setIsLogginActive] = useState(true);
@@ -46,11 +47,6 @@ const App = () => {
       console.error(err.message);
     }
   };
-
-  const [state, setState] = useState({})
-  useEffect(() => {
-    axios.post("/api", {person: "./inputs/test-model.jpg", cloth: "./inputs/example-clothing1.jpg"}).then(res=>console.log(res));
-  })
 
   useEffect(() => {
     console.log(user);
@@ -118,7 +114,7 @@ const App = () => {
 }
 return(
   <div className="ss">
-    <Deploy/>
+    <Wardrobe/>
   </div>
 );
 };

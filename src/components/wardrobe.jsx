@@ -32,22 +32,22 @@ export const Wardrobe = () => {
 
       Person:
       <img src={person1} alt="person"/>
-      <button onClick={()=>setPerson(`input/c.jpg`)}>
+      <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/c.jpg`)}>
         <span>Choose</span>
       </button>
       Person:
       <img src={person2} alt="person"/>
-      <button onClick={()=>setPerson(`input/example_person.jpg`)}>
+      <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/example_person.jpg`)}>
         <span>Choose</span>
       </button>
       Person:
       <img src={person3} alt="person"/>
-      <button onClick={()=>setPerson(`input/test-model2.jpg`)}>
+      <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/test-model2.jpg`)}>
         <span>Choose</span>
       </button>
       Person:
       <img src={person4} alt="person"/>
-      <button onClick={()=>setPerson(`input/model_5.jpg`)}>
+      <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/model_5.jpg`)}>
         <span>Choose</span>
       </button>
 

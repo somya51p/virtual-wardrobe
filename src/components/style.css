@@ -36,3 +36,8 @@ button:hover span:after {
   opacity: 1;
   right: 0;
 }
+
+.inset h1 {
+  color: #444444;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}

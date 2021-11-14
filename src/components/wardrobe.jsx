@@ -26,40 +26,65 @@ export const Wardrobe = () => {
     
     <div id="#head" className="inset">
       <h1>Virtual Wardrobe!!!</h1>
-  
-      Cloth:
-      <img src={cloth1} alt="cloth"/>
-
-      Person:
+    
+    <div className="gradient">
+    <div className="wrap">
+    <h2>Cloth:</h2>
+      <img src={cloth1} alt="cloth"/></div>
+    
+      <div className="wrap">
+      <h2>Person:</h2>
       <img src={person1} alt="person"/>
+      <div className="wrapper">
       <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/c.jpg`)}>
         <span>Choose</span>
       </button>
-      Person:
+      </div>
+      </div>
+      
+      <div className="wrap">
+      <h2>Person:</h2>
       <img src={person2} alt="person"/>
+      <div className="wrapper">
       <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/example_person.jpg`)}>
         <span>Choose</span>
       </button>
-      Person:
+      </div>
+      </div>
+      
+      <div className="wrap">
+      <h2>Person:</h2>
       <img src={person3} alt="person"/>
+      <div className="wrapper">
       <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/test-model2.jpg`)}>
         <span>Choose</span>
       </button>
-      Person:
+      </div>
+      </div>
+
+      <div className="wrap">
+      <h2>Person:</h2>
       <img src={person4} alt="person"/>
+      <div className="wrapper">
       <button onClick={()=>setPerson(`virtual-wardrobe/src/inputs/model_5.jpg`)}>
         <span>Choose</span>
       </button>
+      </div>
+      </div>
+      </div>
 
+      <div className="wrap">
       <button onClick={handleTry}>
         <span>Try-On</span>
       </button>
+      </div>
       {
         load===1 && <h3>Loading...</h3>
       }
       {
         load===2 && <img src={output} alt="output"/>
       }
+     
     </div>
   );
 };

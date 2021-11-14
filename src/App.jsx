@@ -3,6 +3,7 @@ import "./App.css";
 import { Login, Register } from "./components/login/index";
 import userServices from "./services/user";
 import { Deploy } from "./components/Deploy/Deploy";
+import axios from "axios";
 
 const App = () => {
   const [isLogginActive, setIsLogginActive] = useState(true);
@@ -48,13 +49,7 @@ const App = () => {
 
   const [state, setState] = useState({})
   useEffect(() => {
-    fetch("/api").then(response => {
-      if(response.status == 200)
-      {
-        return response.json()
-      }
-    }).then(data => console.log(data))
-    .then(error => console.log(error))
+    axios.post("/api", {person: "./inputs/test-model.jpg", cloth: "./inputs/example-clothing1.jpg"}).then(res=>console.log(res));
   })
 
   useEffect(() => {
